@@ -11,10 +11,14 @@
     <div class="h2">Update Todos</div>
     <a href="{{route('home')}}" class="btn btn-primary btn-sm">Back</a>
 </div>
+<!-- 
 {{print_r($todo)}}
+
+ -->
 <div class="card container-fluid">
     <div class="card-body">
-        <form action="">
+        <form action="" method="POST">
+            @csrf
             <div class="row">
                 <div class="col-md-6">
             <label for="" class="my-2 ">Name<span class="text-danger fw-bold">*<span></label>

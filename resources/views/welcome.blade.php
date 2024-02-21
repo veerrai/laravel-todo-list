@@ -16,7 +16,7 @@
 {{print_r($todos)}}
 
  -->
-<table class="table table-stripped table-primary container-fluid">
+<table class="table table-stripped table-primary container-fluid table-hover">
     <thead>
         <tr>
     <th>Name<span class="text-danger fw-bold">*<span></th>

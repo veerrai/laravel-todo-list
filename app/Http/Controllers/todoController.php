@@ -46,11 +46,10 @@ return redirect(route('home'));
 
    }
 
-
    public function edit($id){
     $todo=todos::find($id);
     $data=compact('todo');
-    return redirect(route('update'))->with($data);
+    return redirect(route("update"))->with($data);
 
    }
 }
