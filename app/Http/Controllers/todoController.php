@@ -35,7 +35,7 @@ $request->validate(
     $todo->work=$request['work'];
     $todo->save();
     
-return redirect(route('home'));
+  return redirect(route('home'));
 
 
    }
@@ -49,7 +49,9 @@ return redirect(route('home'));
    public function edit($id){
     $todo=todos::find($id);
     $data=compact('todo');
-    return redirect(route("update"))->with($data);
+    return view("update")->with($data);
 
    }
+
+
 }

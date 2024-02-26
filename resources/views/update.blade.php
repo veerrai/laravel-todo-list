@@ -11,17 +11,13 @@
     <div class="h2">Update Todos</div>
     <a href="{{route('home')}}" class="btn btn-primary btn-sm">Back</a>
 </div>
-<!-- 
-{{print_r($todo)}}
-
- -->
 <div class="card container-fluid">
     <div class="card-body">
-        <form action="" method="POST">
-            @csrf
+        <form action="" method='POST'>
+          
             <div class="row">
                 <div class="col-md-6">
-            <label for="" class="my-2 ">Name<span class="text-danger fw-bold">*<span></label>
+            <label for="" class="my-2 ">Name<span class="text-danger fw-bold" >*<span></label>
             <input type="text" name="name" class="form-control">
             </div>
             <div class="col-md-6">

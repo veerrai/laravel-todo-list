@@ -25,9 +25,9 @@ Route::get('/create', function () {
 })->name('create');
 
 
-// Route::get('/edit', function(){
-//     return view('update');
-// });
+Route::get('/edit', function(){
+    return view('update');
+});
 
 //edit todo route
 Route::get('/edit/{id}', [todoController::class, 'edit'])->name('edit');
@@ -40,4 +40,5 @@ Route::post('/create', [todoController::class, 'store'])->name('store');
 Route::get('/delete/{id}', [todoController::class, 'delete'])->name('delete');
 
 //update data todo route
-Route::get('update', [todoController::class, 'updateData'])->name('updateData');
+Route::post('update', [todoController::class, 'updateData'])->name('updateData');
+
