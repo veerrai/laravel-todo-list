@@ -40,5 +40,5 @@ Route::post('/create', [todoController::class, 'store'])->name('store');
 Route::get('/delete/{id}', [todoController::class, 'delete'])->name('delete');
 
 //update data todo route
-Route::put('update', [todoController::class, 'updateData'])->name('updateData');
+Route::get('update', [todoController::class, 'updateData'])->name('updateData');
 

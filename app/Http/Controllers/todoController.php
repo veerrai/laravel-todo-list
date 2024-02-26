@@ -65,7 +65,8 @@ return redirect(route('home'));
         ]
         );
         // echo "validation completed";
-        $todo = new todos;
+        $id = $request['id'];
+        $todo = todos::find($id);
         $todo->name=$request['name'];
         $todo->city=$request['city'];
         $todo->salary=$request['salary'];

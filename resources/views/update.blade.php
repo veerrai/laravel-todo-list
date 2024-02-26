@@ -13,7 +13,7 @@
 </div>
 <div class="card container-fluid">
     <div class="card-body">
-        <form action="" method='GET'>
+        <form action="{{route("updateData")}}" method='GET'>
           @csrf
             <div class="row">
                 <div class="col-md-6">
@@ -40,8 +40,9 @@
             <label for="" class="my-2 ">Office<span class="text-danger fw-bold">*<span></label>
             <input type="text" name="office" class="form-control" value="{{$todo->office}}">
             </div>
+            <input type="hidden" name="id" value="{{$todo->id}}">
             <div class="col-md-12">
-                <button class="btn btn-success my-4">Edit Todo</button>
+                <button class="btn btn-success my-4">Update Todo</button>
             </div>
             </div>
         </form>
