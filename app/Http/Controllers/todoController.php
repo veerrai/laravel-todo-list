@@ -53,5 +53,32 @@ return redirect(route('home'));
 
    }
 
+   public function updateData(Request $request){
+    $request->validate(
+        [
+            'name' => 'required',
+            'age' => 'required',
+            'city' => 'required',
+            'work'=> 'required',
+            'office' => 'required',
+            'salary' => 'required'
+        ]
+        );
+        // echo "validation completed";
+        $todo = new todos;
+        $todo->name=$request['name'];
+        $todo->city=$request['city'];
+        $todo->salary=$request['salary'];
+        $todo->age=$request['age'];
+        $todo->office=$request['office'];
+        $todo->work=$request['work'];
+        $todo->save();
+        
+      return redirect(route('home'));
+    
+    
+       
+   }
+
 
 }
